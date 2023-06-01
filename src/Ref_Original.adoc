@@ -1,0 +1,277 @@
+= Ref Original
+:hardbreaks:
+:hide-uri-scheme:
+
+git merge
+
+git log > log.txt
+
+https://developer.actyx.com/
+
+https://stripe.com/docs
+
+https://www.wix.com/experts/client-pitch-sites?utm_source=facebook&utm_medium=cpc&utm_campaign=bd_partners%E2%80%8E_facebook_fb-gated-t1&experiment_id=fb-gated-t1%5Efb-pitch-site&fbclid=IwAR0RhJ7RQ_P8pJKnla1c8pCyhLZGcFaQufDp83fzdNjqP92Tk3svlYRkuGE
+
+https://rgbcolorcode.com/color/aero
+
+https://htmlcheatsheet.com/css/
+
+https://colorlib.com/wp/templates/
+
+https://github.com/Proemion/psp-rfc/blob/master/rfcs/009011_PermissionSets.md
+
+= Map provider maps
+
+https://docs.proemion.com/generated-docs/DataPortal-User-Manual.html#hierarchical-geo-data
+
+div { outline: 1px solid red !important; }
+---
+
+API_clientMgmt.adoc
+
+
+.Capacity Configuration
+[.thumb]
+image::{imageDir}/MainPlug_Connector.png[pdfWidth=40%]
+
+`Monospace` ``
+
+
+https://docs.proemion.com/generated-docs/DataPortal-User-Manual.html#legal-requirements
+
+https://asciidoctor.org/docs/user-manual/#introduction-to-asciidoctor[Asciidoctor User Manual]
+
+[line-through]#Strikethrough#
+////
+
+ifdef::/dp-docs-public-playground/src/docs/asciidoc/root-structure-documents/DataPortal-User-Manual.adoc[]
+ifeval::["{docname}" == "DataPortal-User-Manual"]
+ifeval::["{docname}" == "DataPortal-QuickStart"]
+endif::[]
+
+////
+
+https://www.vector.com/int/en/know-how/technologies/protocols/sae-j1939/#c103372
+
+https://documentor.in/2148/best-examples-product-documentation-guides/
+
+https://www.jslint.com/
+
+https://password.proemion.com/
+
+image:{imageDir}../../031_share_images/ModVar.png[.thumb] 
+*Delete* image:{imageDir}/Delete.png[]
+ 
+ 
+{company_name} {wl-product-name-portal} {wl-company-url} {endpoint-url}
+
+// TODO for chapter 4.1 in the last line
+
+[source,ruby]
+----
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+----
+
+---
+git checkout afde8af  /c/Documentation/dp-docs-public-playground/src/docs/asciidoc/topics/dataportal/user_docs/admin_section/permissions.adoc
+git commit -am "remove unwanted files"
+git rebase 624c2d5~1 -i  
+fixup 0d78b28 remove unwanted files
+
+---
+
+link:{endpoint-url}[documentation,window="_blank"]
+{wl-dataportal-url}[window="_blank"]
+
+---
+git checkout -b issue_A
+git push -u origin issue_ReleaseNotes_vr3_revision
+
+git push -d issue_991_AEMP_Permission
+git branch -d issue_991_AEMP_Permission
+
+git pull origin issue_146_userSett_unitSysConfig
+
+git branch -a
+ - view the branches active locally
+ 
+ git branch -u upstream/pr/880
+ 
+
+*Private_Stash*
+ 
+---
+
+@Alfred jenkins release dp-docs-public-playground
+
+---
+
+git fetch upstream
+git merge upstream master
+ - update branch to whats on 
+
+git pull upstream master
+
+git reset --hard upstream/master
+git reset --hard origin/master
+
+git reset --soft HEAD^ - commit to the wrong branch!
+
+git branch issue_949_FuelCountWeather github/issue_949_FuelCountWeather
+
+---
+
+** https://stackoverflow.com/questions/16288176/your-branch-is-ahead-of-origin-master-by-3-commits **
+
+** https://stackoverflow.com/questions/3876977/update-git-branches-from-master **
+
+** https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files **
+
+** https://stackoverflow.com/questions/26137852/how-to-update-my-working-git-branch-from-another-branch-develop **
+
+** https://stackoverflow.com/questions/6465699/git-push-to-wrong-branch **
+
+** https://stackoverflow.com/questions/67699/how-to-clone-all-remote-branches-in-git **
+
+** https://stackoverflow.com/questions/9646167/clean-up-a-fork-and-restart-it-from-the-upstream **
+
+https://stackoverflow.com/questions/42332769/how-do-i-reset-the-git-master-branch-to-the-upstream-branch-in-a-forked-reposito
+
+** https://stackoverflow.com/questions/27567846/how-can-i-check-out-a-github-pull-request-with-git
+
+** https://docs.github.com/en/github/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally
+
+---
+
+NOTE
+
+TIP
+
+IMPORTANT
+
+CAUTION
+
+WARNING
+
+^word^
+
+---
+
+https://stackoverflow.com/questions/12481639/remove-files-from-git-commit
+
+git pull upstream master
+git push origin master
+
+---
+
+The _Machine:Maintain_ <<Machines Service, permission set>> is required for the tasks that need to be performed for this feature.
+
+//the a infront of the | enables asciidoc rendering for the following cell.
+[width="90%",height=90%]
+|==================
+|image:{imageDir}/gui_layout/data_portal_dash_side_menu.png[.thumb] a|
+
+Select a topic from the list to jump to that section in the manual:
+
+* <<#dashboard,Dashboard>>
+* <<#machines,Machines>>
+* <<#reports,Reports>>
+* <<#administration,Administration>>
+|==================
+
+---
+
+[%header,cols="1, 3"]
+|===
+|Item |Description
+|===
+
+---
+
+===== Organizations Service
+
+[%header,cols="1, 1, 2"]
+|===
+|Level |Context | Description
+|*View*
+| -
+|User can view organization units.
+.16+|*Maintain*
+.5+|Org Unit
+|Move:
+ - machines to a different organization unit
+ - users to a different organization unit
+|Update:
+ - organization unit parent based on the candidate list
+ - organization unit type
+ - organization unit Name
+ - user permission sets
+|Retrieves a list:
+ - organization unit _parent_ candidates
+ - user permission sets
+|Create an organization unit.
+|Delete an organization unit.
+.2+|User
+|Retrieve a list of all users or a single user's details.
+|Update:
+ - user details
+ - user email
+.3+|Theme
+|Create a new theme for the organization unit.
+|Access:
+ - an organization unit's theme
+ - the organization tree
+ - the images from the organization unit's theme
+|Delete a theme.
+.3+|Model dashboard
+|Create or update a dashboard for a model.
+|Allows access to the tree of an organization unit and viewing whether or not a dashboard for a model is configured for specific organization units.
+|Delete a dashboard for a model.
+.3+|Organization dashboard
+|Create or update a dashboard for a specific organization unit.
+|Allows access to the organization tree and viewing whether or not a dashboard is configured for specific organization units.
+|Delete a dashboard for a specific organization unit.
+.3+|*Admin*
+.3+|User
+|Create new user.
+|Change a user's ban status.
+|Resend and invitation email to an inactive user.
+|===
+
+---
+
+Select the Manage Machine icon image:{imageDir}/gui_layout/MachineManage.PNG[Manage Machine, title="Manage Machine"] in the upper right-hand corner to open the dialog.
+
+git remote add upstream https://github.com/Proemion/dp-docs-public-playground.git
+
+CANLINK MOBILE 3000
+
+https://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository
+
+include::../08_content/18_topics/addWidget.adoc[]
+include::../08_content/18_topics/selectMachinesDialog.adoc[]
+
+In your local clone of your forked repository, you can add the original GitHub repository as a "remote". ("Remotes" are like nicknames for the URLs of repositories - origin is one, for example.) Then you can fetch all the branches from that upstream repository, and rebase your work to continue working on the upstream version. In terms of commands that might look like:
+
+1. Add the remote, call it "upstream":
+
+ git remote add upstream https://github.com/whoever/whatever.git
+
+2. Fetch all the branches of that remote into remote-tracking branches, 
+ - such as upstream/master:
+
+ git fetch upstream
+
+3. Make sure that you're on your master branch:
+
+ git checkout master
+
+4. Rewrite your master branch so that any commits of yours that aren't already in upstream/master are replayed on top of that other branch:
+
+ git rebase upstream/master
+ 
+ https://stackoverflow.com/questions/6591213/how-do-i-rename-a-local-git-branch[Rename a branch]
