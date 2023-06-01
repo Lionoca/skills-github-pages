@@ -1,0 +1,83 @@
+:hardbreaks:
+:toc: left
+:hide-uri-scheme:
+
+= Print Labels
+
+From the Lab Ops interface you can print and register labels for use in the lab.
+
+Printing labels involves 1) selecting a barcode pattern, 2) selecting the number of barcodes to print and 3) generating and printing the labels.
+
+== Print Labels Panel
+
+include::../contentSnippets/snip_jobWait.adoc[]
+
+The print setup panel contains the following information:
+
+.Print Labels Panel
+[.thumb]
+image::labelPrintPanel.png[]
+
+.Label Printing
+[%autowidth%, stripes=hover]
+|===
+|*Item* |*Description*
+|Pattern|Drop-down and free-text search of available barcode patterns to choose from.
+|# of barcodes |Input x number of barcodes to generate for printing.
+|Reprint |Print a select number of barcodes once more.
+|Generate labels |Generate labels in the Lab Ops application for printing.
+|===
+
+== Generate and Print Labels
+
+Follow the instructions below to generate and print labels:
+
+*Step 1*: On the left of your browser, select *Print Labels* from the Lab Ops left-side menu to open the Print Labels panel.
+*Step 2*: In the *Patterns* drop-down field select the down arrow to display the available barcodes. You can also enter the pattern of a barcode already in the system.
+*Step 3*: To the right of the *Patterns* drop-down, enter the number of barcodes you want to generate with the arrow icons or by entering a number in the field.
+*Step 4*: Click the *Generate labels* button.
+
+The generated labels appear in a table as shown:
+
+.Generated Labels
+[.thumb]
+image::labelGen.png[]
+
+=== Print Labels
+
+Select the *Print Labels* button to send all of the generated labels to a configured printer. Select the *Print* image:print.png[] icon to send a single label to a configured printer.
+
+.Printed Labels
+[.thumb]
+image::printed.png[]
+
+=== Reprint Barcodes
+
+This function allows you to reprint labels that are already registered in Lab Ops. To reprint barcodes:
+
+*Step 1.* Select the *Reprint Barcodes* button to open the query panel.
+*Step 2.* Enter the existing barcodes you want to reprint and select the query button at the bottom of the panel.
+
+.Reprint
+[.thumb]
+image::reprintQuery.png[]
+
+After selecting *Query*, the status of the queried barcode labels changes to *Reprint*. If you enter text in the barcode query panel, there is _no data_ for Lab Ops to print and this is reflected in the status.
+
+.Reprint Status
+[.thumb]
+image::reprintStatus.png[]
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,276 @@
+:hardbreaks:
+:toc: left
+:hide-uri-scheme:
+
+= Receive Material/ Reception
+
+== Introduction
+
+In the Lab Ops UI this is labelled as the *Receive Material* job.
+
+Reception is the process of:
+
+1. <<Step 1. Receive Material, *Receive Material*>>: This is the first operation and involves receiving (or transferring) material into the lab and selecting the proper container for scanning into the system.
+
+2. <<Step 2. Get Material Data/ Scan, *Get Material Data and Scan*>>: Confirm the job details (container type, material type) are correct, and scan the containers.
+
+3. <<Step 3. Audit and Storage Format, *Audit and Storage*>>: In this operation the container contents are confirmed and subject to an audit and rescan if necessary. Once the container data and contents are confirmed, the data must be transformed into a format suitable for storage.
+
+== Step 1. Receive Material
+
+Receive Material is the selection of the type of container and scanning the data into the system. Containers are classified as either *rack scan* (rack containers) or *tubes, vials, plates scan* (and other container types).
+
+Begin the process by selecting *Receive Material* from the left-side menu under the *Lab Operations* heading. This opens the _container type selection_ screen shown.
+
+.Container Type Selection
+[.thumb]
+image::Images/contTyp.png[]
+
+=== Containers Specification
+
+
+.*Rack Scan*
+[%collapsible]
+====
+The table shows the different types of superordinate containers (contain many smaller containers).
+[%autowidth%, stripes=hover]
+|===
+|*#*|*Solid/Liquid* |*Ziath* |*Audit* |*Beckman*|*Solubilized*
+|1|L|-|x|x|-
+|2|L|4|x|-|-
+|3|L|1|x|-|-
+|4|S|-|-|x|-
+|5|S|4|-|-|-
+|6|S|1|-|-|-
+|7|L|-|-|x|-
+|8|L|4|-|-|-
+|9|L|1|-|-|-
+|10|-|-|-|-|SampleScan Mini
+|11|-|-|-|-|Fluid X container
+|12|-|1|-|-|x
+|13|-|2|-|-|x
+|===
+====
+
+
+.*Tubes, Vials and Plates Scan*
+[%collapsible]
+====
+The table shows the different types of individual material containers.
+[%autowidth%, stripes=hover]
+|===
+|*#*|*Neat/Liquid* |*Mett. TB* |*Audit* |*Vial* |*Plate, other?*|*Sartorius*
+|1|L|-|-|x|-|-
+|2|N|-|-|x|-|-
+|3|N|1|-|x|-|-
+|3|N|-|x|x|-|-
+|4|N|A|-|x|-|-
+|5|N|B|-|x|-|-
+|6|N|C|-|x|-|-
+|7|N|D|-|x|-|-
+|8|N|A|x|x|-|-
+|9|N|B|x|x|-|-
+|10|N|C|x|x|-|-
+|11|N|D|x|x|-|-
+|12|-|-|-|-|96p|-
+|13|-|-|-|-|384p|-
+|14|N|-|-|x|-|1
+|15|-|-|-|-|p|-
+|===
+====
+
+
+== Step 2. Get Material Data/ Scan
+
+Once you have selected the <<Containers Specification, container type>>, the data capture panel opens. The data capture fields depend on the type of container selected. An example of a rack scan and a tubes, vials and plates scan are shown.
+
+IMPORTANT: #*Describe the information that needs to be entered in this operation!*#
+
+.Rack Scan Example
+[.thumb]
+image::Images/getData_rack.png[]
+
+.Tubes, Vials and Plates Scan Example
+[.thumb]
+image::Images/getData_neat.png[]
+
+Information about the current operation is contained in the *Jobs Waiting* panel in the upper part of your screen.
+
+
+.*Jobs Waiting*
+[%collapsible]
+====
+*Details* (#where do these jobs come from?#)
+[%autowidth%, stripes=hover]
+|===
+|Item |Description
+|Jobs Waiting|How many job are waiting to be carried out
+|ID |Job number identification from the material owner (?)
+|Priority |#(?)#
+|Description |Task description
+|Assigned To |Operator assigned to the task
+|#Materials |#(?)#
+|Selected Path |#(?)#
+|===
+====
+
+
+=== Operation Details and Status
+
+Underneath the *Jobs Waiting* section, you can see the current operation details and status.
+
+
+.*Load and Identify Status*
+[%collapsible]
+====
+*Details*
+[%autowidth%, stripes=hover]
+|===
+|*Item*| *Description*
+|Started| When the Reception container was selected.
+|Inbound Format |The container type.
+|Scanned Items |Items that have been scanned into the system.
+|Origin |#(?)#
+|Placed Racks |#(?)#
+|Scanned Tubes |#(?)#
+|===
+====
+
+
+.Details and Status
+[.thumb]
+image::Images/LoadScanRacks_SSMini.png[]
+
+IMPORTANT: #What does the word _origin_ mean?#
+
+=== Scan the Containers
+
+1. Select the position of the rack on the machine (1, 2 or 3).
++
+.Rack Position Marker
+[.thumb]
+image::Images/rackPos.png[]
+
+2. Enter the barcode into the *Identifier* field.
+3. Click the *Start Rack Scan* button.
+
+While the scanning process is running, the <<Operation Details and Status, details and status>> section updates the number of racks placed, scanned and the number of units (vial or tubes) scanned.
+
+=== Scan Information.
+
+The scan operations (underneath <<Operation Details and Status, Details and Status>>) include instructions on how to properly perform a container scan. Different container types have different configurations.
+
+[.thumb]
+image::Images/RLS/wMettTB1.png[]
+
+All scan types require an *Identifier*.
+
+IMPORTANT: #How does Identifier differ from _barcode_?#
+
+.Scan Parameters
+[%autowidth%]
+|===
+||*Mett TB1* |*Plates* |*Neat Vial* |*SS Mini*
+|*Parameter* |-|-|-|-
+|#Origin(?)# |x|x |x|-
+|Weight |x|- |x|-
+|#Override Handover (??)# |x|- |x|-
+|Position |-|- |-|x
+|===
+
+The following information is available for some Vials and Tube containers as well as *Lots With a Scale*:
+
+* Barcode
+* Material
+* Container Type
+* Weight
+* #Tare (?)#
+* Gross
+* #*Verified(?)#
+* #*Diff.(?)#
+* Status
+* #Handover(?)#
+
+== Scan Results
+
+When the scan operation concludes, the results are shown at the bottom of the data capture panel.
+
+.Successful Scan Result
+[.thumb]
+image::Images/scanResult.png[]
+
+After the scan has been completed you must review the data and confirm its correctness.
+
+IMPORTANT: #What exactly does correctness mean?#
+
+Select the _expand_ arrow to the left of the barcode in the result to view the *Rack Data* and the lot *Visualization* shown below.
+
+.Scan Result - Rack Data
+[.thumb]
+image::Images/scanRackData.png[]
+
+=== Visualization
+
+.Scan Result - Visualization
+[.thumb]
+image::Images/scanResultViz.png[]
+
+You can edit the individual positions of the scanned materials by selecting the *Edit* image:Images/scanEdit_icon.png[] icon. This opens the *Edit Positions* dialog as shown.
+
+IMPORTANT. #Need descriptions for the terms in the key!#
+
+=== Edit Position
+
+.Scan Result - Edit Position
+[.thumb]
+image::Images/scanPosEdit.png[]
+
+Once you have performed the confirmation, select the *Save Racks Without Issues* button.
+
+=== Remove Barcode
+If however, you need to rescan the lot, select the *Rescan* button. The rescan operation allows you to remove and replace the barcodes in the scan positions.
+
+To remove a lot from the scan position:
+
+Step 1. Select a barcode from the scan position.
+Step 2. Drag the lot outside of the scan position.
+Step 3. Place the lot in the *Remove* area.
+
+.Remove Barcode
+[.thumb]
+image::Images/scanRemoveBarcode.png[]
+
+[.thumb]
+image::barcodeRemove.gif[width=640, format=gif]
+
+== Step 3. Audit and Storage Format
+
+Once you have selected the *Save Racks Without Issues* button you are brought to the *Storage Formats* panel where you can view and adjust the storage and/or data for the individual scanned positions.
+
+[.thumb]
+image::Images/scanPosDetail.png[]
+
+Moving the mouse over the *details* label of a position in the table and selecting it opens the storage formats for the weights and volumes. Edit the details by selecting the *Edit* image:Images/scanEdit_icon.png[] icon.
+
+Select *Commit* in the <<Operation Details and Status, *Status and Details*>> panel to confirm the saving of the scanned materials in the displayed formats.
+
+NOTE: Is this all there is to #commit and finished#?
+
+
+#*TBD#
+
+#* describe the job(s) that comes next*#
+#* Check against Automated Test Scenario's*#
+
+
+== Receive Material Process Diagram (#For reference only)
+
+Receive Material Diagram
+[.thumb]
+image::Images/receive_material.png[]
+
+Receive Material-Audit
+[.thumb]
+image::Images/receive_material-audit.png[]
+
+
