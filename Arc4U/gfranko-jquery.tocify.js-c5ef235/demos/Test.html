@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Arc4U POC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/black-tie/jquery-ui.css" rel="stylesheet">
+    <link href="../src/stylesheets/jquery.tocify.css" rel="stylesheet">
+    <link href="styles/prettify.css" type="text/css" rel="stylesheet" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <style>
+    body {
+      padding-top: 10px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .headerDoc {
+      color: #005580;
+    }
+
+@media (max-width: 767px) {
+    #toc {
+        position: relative;
+        width: 100%;
+        margin: 0px 0px 10px 0px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span3">
+            <div id="toc">
+            </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+
+                    <h1><a id="What_can_you_do_with_Arc4u_0"></a>What can you do with Arc4u?</h1>
+            <div class="hero-unit">
+                <div class="hero-unit">
+                    <h2><a id="Elia_Architectural_Framework_1"></a>Elia Architectural Framework</h2>
+                    <br />
+                    <p class="has-line-data" data-line-start="3" data-line-end="4">Arc4u is a framework providing support for many common tasks and problems that need to be solved in Elia applications written <a href="http://in.NET">in.NET</a> (Core).</p>
+                    <p class="has-line-data" data-line-start="5" data-line-end="6">The specific areas of the support that is provided are:</p>
+                    <ul>
+                        <li class="has-line-data" data-line-start="6" data-line-end="7">Logging / Diagnostics</li>
+                        <li class="has-line-data" data-line-start="7" data-line-end="8">Dependency Injection</li>
+                        <li class="has-line-data" data-line-start="8" data-line-end="9">Serialization</li>
+                        <li class="has-line-data" data-line-start="9" data-line-end="10">Caching</li>
+                        <li class="has-line-data" data-line-start="10" data-line-end="11">OData support</li>
+                        <li class="has-line-data" data-line-start="11" data-line-end="12">Authentication</li>
+                        <li class="has-line-data" data-line-start="12" data-line-end="13">gRPC</li>
+                        <li class="has-line-data" data-line-start="13" data-line-end="14">Data Layer helpers</li>
+                        <li class="has-line-data" data-line-start="14" data-line-end="15">Entity Framework Core helpers</li>
+                        <li class="has-line-data" data-line-start="15" data-line-end="16">Unclassified</li>
+                    </ul>
+                    <p class="has-line-data" data-line-start="18" data-line-end="19">In addition, Arc4u provides helpers, abstractions, extensions and utilities for specific .NET products and technologies used in Elia projects:</p>
+                    <ul>
+                        <li class="has-line-data" data-line-start="20" data-line-end="21"><a href="https://prismlibrary.com/">Prism</a></li>
+                        <li class="has-line-data" data-line-start="21" data-line-end="22"><a href="https://www.mongodb.com/">MongoDB</a></li>
+                        <li class="has-line-data" data-line-start="22" data-line-end="23"><a href="https://particular.net/nservicebus">NServiceBus</a></li>
+                        <li class="has-line-data" data-line-start="23" data-line-end="25"><a href="https://kubemq.io/">KubeMQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+                    <h2 ><a id="Logging__Diagnostics_25"></a>Logging / Diagnostics</h2>
+            <div class="hero-unit">
+                <div class="hero-unit">
+                    <h3><a ></a>Logging category support</h3>
+                    <p class="has-line-data" data-line-start="28" data-line-end="29">Although .NET Core already provides logging, Arc4u provides methods specifying different common logging categories in Elia applications:</p>
+                    <ul>
+                        <li class="has-line-data" data-line-start="29" data-line-end="30">Technical: logging concerning technical (IT) stuff</li>
+                        <li class="has-line-data" data-line-start="30" data-line-end="31">Business: logging that concerns business rules</li>
+                        <li class="has-line-data" data-line-start="31" data-line-end="33">Monitoring: logging concerning performance monitoring like CPU and memory</li>
+                    </ul>
+                    <p class="has-line-data" data-line-start="33" data-line-end="34">They correspond to what is defined in <a href="https://github.com/GFlisch/Arc4u/blob/master/src/Arc4u.Standard.Diagnostics/MessageCategory.cs">Arc4u/MessageCategory.cs at master · GFlisch/Arc4u (github.com)</a> . The categories are used in reporting and other scenarios where it is necessary to reduce “unwanted noise” in what is being logged.</p>
+                    <p class="has-line-data" data-line-start="35" data-line-end="36">These categories are built on the standard .NET Core ILogger and are supported in a fluent way. See <a href="https://github.com/GFlisch/Arc4u/blob/master/src/Arc4u.Standard.Diagnostics/Fluent/ILoggerExtension.cs">Arc4u/ILoggerExtension.cs at master · GFlisch/Arc4u (github.com)</a>. This allows us to write:</p>
+                    <pre><code class="has-line-data" data-line-start="38" data-line-end="41" class="language-c">logger.Technical().Information(<span class="hljs-string">"Start the Api process."</span>).Log();
+logger.Business().Warning(<span class="hljs-string">"User Not Found"</span>).Log();
+</code></pre>
+                    <p class="has-line-data" data-line-start="42" data-line-end="43">… resulting in cleaner code.</p>
+                    <pre><code class="has-line-data" data-line-start="45" data-line-end="48" class="language-sh">npm install --production
+NODE_ENV=production node app
+</code></pre>
+                </div>
+            </div>
+            <div class="hero-unit">
+                <div class="hero-unit">
+                    <h3><a ></a>Logging category support</h3>
+                    <p class="has-line-data" data-line-start="28" data-line-end="29">Although .NET Core already provides logging, Arc4u provides methods specifying different common logging categories in Elia applications:</p>
+                    <ul>
+                        <li class="has-line-data" data-line-start="29" data-line-end="30">Technical: logging concerning technical (IT) stuff</li>
+                        <li class="has-line-data" data-line-start="30" data-line-end="31">Business: logging that concerns business rules</li>
+                        <li class="has-line-data" data-line-start="31" data-line-end="33">Monitoring: logging concerning performance monitoring like CPU and memory</li>
+                    </ul>
+                    <p class="has-line-data" data-line-start="33" data-line-end="34">They correspond to what is defined in <a href="https://github.com/GFlisch/Arc4u/blob/master/src/Arc4u.Standard.Diagnostics/MessageCategory.cs">Arc4u/MessageCategory.cs at master · GFlisch/Arc4u (github.com)</a> . The categories are used in reporting and other scenarios where it is necessary to reduce “unwanted noise” in what is being logged.</p>
+                    <p class="has-line-data" data-line-start="35" data-line-end="36">These categories are built on the standard .NET Core ILogger and are supported in a fluent way. See <a href="https://github.com/GFlisch/Arc4u/blob/master/src/Arc4u.Standard.Diagnostics/Fluent/ILoggerExtension.cs">Arc4u/ILoggerExtension.cs at master · GFlisch/Arc4u (github.com)</a>. This allows us to write:</p>
+                    <pre><code class="has-line-data" data-line-start="38" data-line-end="41" class="language-c">logger.Technical().Information(<span class="hljs-string">"Start the Api process."</span>).Log();
+logger.Business().Warning(<span class="hljs-string">"User Not Found"</span>).Log();
+</code></pre>
+                    <p class="has-line-data" data-line-start="42" data-line-end="43">… resulting in cleaner code.</p>
+                    <pre><code class="has-line-data" data-line-start="45" data-line-end="48" class="language-sh">npm install --production
+NODE_ENV=production node app
+</code></pre>
+                </div>
+            </div>
+        </div>
+
+
+</div><!--/.fluid-container-->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../libs/jquery/jquery-1.8.3.min.js"></script>
+<script src="../libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
+<script src="javascripts/bootstrap.js"></script>
+<script src="../src/javascripts/jquery.tocify.js"></script>
+<script src="javascripts/prettify.js"></script>
+<script>
+        $(function() {
+
+            var toc = $("#toc").tocify({
+              selectors: "h1,h2,h3,h4"
+            }).data("toc-tocify");
+
+            prettyPrint();
+            $(".optionName").popover({ trigger: "hover" });
+
+        });
+    </script>
+
+</body>
+</html>
